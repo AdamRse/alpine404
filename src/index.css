@@ -8,3 +8,16 @@
 body {
 font-family: "Barlow", sans-serif;
 }
+
+.VideoAlpine{
+    flex: content;
+    justify-content: center;
+    justify-items: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    }
