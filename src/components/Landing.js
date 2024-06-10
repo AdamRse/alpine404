@@ -9,8 +9,7 @@ function Landing() {
           Config ta StéphaneMobile
         </button>
       </NavLink>
-      <div>page1</div>
-      <a href="/configurateur">Aller page 2</a>
+      <div>Landing page</div>
     </>
   );
 }
