@@ -6,15 +6,20 @@ import {
 } from "react-router-dom";
 import LandingPage from "./components/Landing";
 import Configurateur from "./components/Configurateur";
+
+import Navbar from "./components/Navbar";
  
 function App() {
     return (
-        <Router>
-            <Routes>
-                <Route exact path="/" element={<LandingPage />} />
-                <Route path="/configurateur" element={<Configurateur />} />
-            </Routes>
-        </Router>
+      <>
+        <Navbar />
+          <Router>
+              <Routes>
+                  <Route exact path="/" element={<LandingPage />} />
+                  <Route path="/configurateur" element={<Configurateur />} />
+              </Routes>
+          </Router>
+      </>
     );
 }
  
