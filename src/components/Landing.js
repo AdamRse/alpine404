@@ -34,28 +34,11 @@ function Landing() {
   );
   return (
     <>
-
       <NavLink to="/Configurateur">
         <button className="m-5 text-xl text-white font-bold bg-gray-800 p-4 rounded-md">
           Config ta StéphaneMobile
         </button>
       </NavLink>
-<<<<<<< HEAD
-      <div>Landing page</div>
-      <div>
-      <section className="section flex-center column">
-        <h2>Basic ScrollTrigger with React</h2>
-        <p>Scroll down to see the magic happen!!</p>
-      </section>
-      <div className="section flex-center column" ref={main}>
-        <div className="box gradient-blue">box</div>
-        <div className="box gradient-blue">box</div>
-        <div className="box gradient-blue">box</div>
-      </div>
-      <section className="section"></section>
-    </div>
-=======
-
       <div
         id="default-carousel"
         className="relative w-full"
@@ -209,7 +192,6 @@ function Landing() {
           passionnés.
         </p>
       </div>
->>>>>>> c915119efc9e70d5335afd6e443b0abe4e6607ce
     </>
   );
 }
