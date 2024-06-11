@@ -1,15 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-<<<<<<< HEAD
 import { gsap } from "gsap";
 import { useRef } from 'react';
     
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-=======
-import "../index.css";
->>>>>>> c915119efc9e70d5335afd6e443b0abe4e6607ce
 
 function Landing() {
   gsap.registerPlugin( ScrollTrigger);
