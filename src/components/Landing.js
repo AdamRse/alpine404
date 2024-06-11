@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
+
 function Landing() {
   gsap.registerPlugin( ScrollTrigger);
   const main = useRef();
@@ -29,6 +30,11 @@ function Landing() {
   );
   return (
     <>
+      <NavLink to="/Configurateur">
+        <button className="m-5 text-xl text-white font-bold bg-gray-800 p-4 rounded-md">
+          Config ta StéphaneMobile
+        </button>
+      </NavLink>
       <div
         id="default-carousel"
         className="relative w-full"
