@@ -11,7 +11,7 @@ function Configurateur() {
       </Link>
       <div>Configurateur</div>
     </>
-  )
+  );
 }
 
-export default Configurateur
+export default Configurateur;
