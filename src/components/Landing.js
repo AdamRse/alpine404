@@ -1,27 +1,35 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { createContext, useContext, useState } from "react";
 import { gsap } from "gsap";
-import { useRef } from 'react';
-    
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import { Link } from "react-router-dom";
+import Capture from "../images/Capture.png";
 
+const handleDragStart = (e) => e.preventDefault();
+
+const items = [
+  <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
+  <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
+  <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
+];
 
 function Landing() {
-  gsap.registerPlugin( ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
   const main = useRef();
   useGSAP(
     () => {
-      const boxes = gsap.utils.toArray('.box');
+      const boxes = gsap.utils.toArray(".box");
       boxes.forEach((box) => {
         gsap.to(box, {
           x: 150,
           scrollTrigger: {
             trigger: box,
-            start: 'bottom bottom',
-            end: 'top 20%',
+            start: "bottom bottom",
+            end: "top 20%",
             scrub: true,
-            // markers: true,
           },
         });
       });
@@ -30,70 +38,29 @@ function Landing() {
   );
   return (
     <>
-      <NavLink to="/Configurateur">
-        <button className="m-5 text-xl text-white font-bold bg-gray-800 p-4 rounded-md">
-          Config ta StéphaneMobile
-        </button>
-      </NavLink>
+      <div className="flex justify-center mt-16">
+        <div className="container">
+          <AliceCarousel mouseTracking>
+            <Link href="#">
+              <img src={Capture} className="w-full h-auto" alt="Slide 1" />
+            </Link>
+            <Link href="#">
+              <img src={Capture} className="w-full h-auto" alt="Slide 2" />
+            </Link>
+            <Link href="#">
+              <img src={Capture} className="w-full h-auto" alt="Slide 3" />
+            </Link>
+          </AliceCarousel>
+        </div>
+      </div>
       <div
         id="default-carousel"
         className="relative w-full"
         data-carousel="slide"
       >
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <div className="accueilvideo">
-              <video
-                className="VideoAlpine"
-                src="https://cdn.group.renault.com/alp/master/alpine-new-cars/homepage/banners/desktop/alpine-teasing3-video-a290-hp-desktop.mp4.asset.mp4/e8ba72fc99.mp4"
-                autoPlay
-                loop
-                muted
-              ></video>
-            </div>
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src=""
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src=""
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src=""
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src=""
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
-        </div>
+        <div className="relative h-56 overflow-hidden rounded-lg md:h-96"></div>
 
         <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
           <button
             type="button"
             className="w-3 h-3 rounded-full"
@@ -174,19 +141,23 @@ function Landing() {
         </button>
       </div>
 
-      <div className="container">
-        <h1>MADE BY RACERS</h1>
-        <p className="flex justify-center">
-          En 1955, Jean Rédélé, entrepreneur passionné, fonde Alpine sur trois
-          piliers : agilité, élégance, esprit de compétition. Conçue par des
-          pilotes pour ceux qui veulent maîtriser l’asphalte, la légende Alpine
-          s’est érigée à travers des victoires mythiques, et un engagement
-          sportif sans limite. Depuis 2016, à travers notre nouvelle gamme A
-          110, nous continuons à gravir tous les échelons du sport automobile.
-          Demain, nous voulons réinventer la sportivité automobile avec des
-          technologies innovantes issues de la Formule 1, pour des pilotes
-          passionnés.
-        </p>
+      <div className="flex justify-center">
+        <div className="container">
+          <h1 className="font-semibold text-3xl content-center items-center m-4">
+            MADE BY RACERS
+          </h1>
+          <p className="flex justify-center items-center ">
+            En 1955, Jean Rédélé, entrepreneur passionné, fonde Alpine sur trois
+            piliers : agilité, élégance, esprit de compétition. Conçue par des
+            pilotes pour ceux qui veulent maîtriser l’asphalte, la légende
+            Alpine s’est érigée à travers des victoires mythiques, et un
+            engagement sportif sans limite. Depuis 2016, à travers notre
+            nouvelle gamme A 110, nous continuons à gravir tous les échelons du
+            sport automobile. Demain, nous voulons réinventer la sportivité
+            automobile avec des technologies innovantes issues de la Formule 1,
+            pour des pilotes passionnés.
+          </p>
+        </div>
       </div>
     </>
   );
