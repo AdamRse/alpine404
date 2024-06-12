@@ -28,11 +28,19 @@ function Configurateur() {
             Select a car
             <div className='conteneur-images'>
               <div className='selcteur-card'>
+<<<<<<< HEAD
                 <img src={bgPure} onMouseEnter={() => { setSelectHover(1) }} onMouseLeave={() => { setSelectHover(false)}} />
               </div>
               
               <div className='selcteur-card'>
                 <img src={bgLegende} style={{transform: "scaleX(-1)"}} onMouseEnter={() => { setSelectHover(0)}} onMouseLeave={() => { setSelectHover(false)}} />
+=======
+                <img src={bgPure} onMouseEnter={() => { setSelectHover(1) }} onMouseLeave={() => { setSelectHover(false)}} alt="Pure" />
+              </div>
+              
+              <div className='selcteur-card'>
+                <img src={bgLegende} style={{transform: "scaleX(-1)"}} onMouseEnter={() => { setSelectHover(0)}} onMouseLeave={() => { setSelectHover(false)}} alt="Legend" />
+>>>>>>> 0e92427 (fix du sélécteur, il faudra juste changer la police (dans tous les sens du terme))
               </div>
             </div>
           </div>
