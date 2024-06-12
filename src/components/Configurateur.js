@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import bgPure from "../images/configurateur/modele/selection/pure.png";
 import bgLegende from "../images/configurateur/modele/selection/legende.png";
 import "./configurateur.css";
