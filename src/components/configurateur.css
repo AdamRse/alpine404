@@ -10,6 +10,7 @@
     width: 120%;
     display: flex;
     justify-content: space-between;
+    transition: left .3s ease-out;
 }
 #choix .conteneur img{
     width: 50%;
