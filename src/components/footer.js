@@ -3,8 +3,8 @@ import AlpineLogo from "../images/alpine-logo.png";
 
 function Footer() {
   return (
-    <div className="bg-black mt-10">
-      <footer className="bg-zinc-50 text-center text-surface/75 dark:bg-gray-900 dark:text-white/75 lg:text-left">
+    <div className="bg-blue-950 border-gray-200 text-white mt-24">
+      <footer className="text-center text-surface/75bg-blue-950 border-gray-200 text-white lg:text-left">
         <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
           <div className="me-12 hidden lg:block">
             <img src={AlpineLogo} className="h-8" alt="Alpine Logo" />{" "}
