@@ -8,17 +8,19 @@ import "./configurateur.css";
 function Configurateur() {
   const [selectHover, setSelectHover] = useState(false);
 
-  // function selecteurMotion() {
-  //   let defaultLeftMargin = 10;
-  //   if (selectHover === 0) defaultLeftMargin = 0;
-  //   else if (selectHover === 1) defaultLeftMargin = defaultLeftMargin * 2;
-  //   return { left: defaultLeftMargin + "%" };
-  // }
+  function selecteurMotion(){
+    let defaultLeftMargin = 10;
+    if(selectHover===0) defaultLeftMargin = -defaultLeftMargin*2
+    else if(selectHover===1) defaultLeftMargin = 0;
+    else defaultLeftMargin = -defaultLeftMargin
+    console.log(selectHover, defaultLeftMargin);
+    return {left: defaultLeftMargin+"%"}
+  }
 
   return (
     <>
       <section id="choix">
-        <div className="conteneur">
+        <div className="conteneur" style={selecteurMotion()}>
           <img src={bgPure} alt="Pure" />
           <img
             src={bgLegende}
@@ -26,13 +28,12 @@ function Configurateur() {
             alt="Legend"
           />
         </div>
-        <div className="selecteur">
           <div className="conteneur-images">
             <div className="selcteur-card">
               <img
                 src={bgPure}
                 onMouseEnter={setSelectHover(1)}
-                onMouseLeave={selectHover(false)}
+                onMouseLeave={setSelectHover(false)}
                 alt="Pure"
               />
             </div>
@@ -47,7 +48,6 @@ function Configurateur() {
               />
             </div>
           </div>
-        </div>
       </section>
     </>
   );
