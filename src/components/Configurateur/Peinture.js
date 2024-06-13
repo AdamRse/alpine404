@@ -5,7 +5,7 @@ import { changeSelection } from '../../store/slice';
 import bgPure from "../../images/configurateur/modele/selection/pure.png";
 import bgLegende from "../../images/configurateur/modele/selection/legende.png";
 
-function SelecteurAlpine() {
+function Peinture() {
 
     const dispatch = useDispatch();
     const [selectHover, setSelectHover] = useState(false);
@@ -26,9 +26,9 @@ function SelecteurAlpine() {
 
     return (
         <section id="peinture">
-            <img src='../../images/configurateur/modele/selection/pure.png' />
+            <img src="./../images/configurateur/modele/selection/pure.png" />
         </section>
     )
 }
 
-export default SelecteurAlpine
+export default Peinture
