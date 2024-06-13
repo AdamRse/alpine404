@@ -11,10 +11,6 @@ function SelecteurAlpine() {
     const [selectHover, setSelectHover] = useState(false);
     const selection = useSelector(state => state.alpine.selection);
 
-    // dispatch(
-    //     manageActionFree(false)
-    // );
-
     function selecteurMotion() {
         let defaultLeftMargin = 10;
         if (selectHover === 0) defaultLeftMargin = -defaultLeftMargin * 2
