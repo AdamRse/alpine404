@@ -1,6 +1,7 @@
 import React from "react";
 import AlpineLogo from "../images/alpine-logo.png";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -24,26 +25,23 @@ function Navbar() {
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
               <li>
-                <a
-                  className="text-gray-200 hover:text-cyan-300"
-                  target="_parent"
-                  href="#"
-                >
-                  <Link to="/">
-                    <p className="font-thin">Accueil</p>
-                  </Link>
-                </a>
+                <NavLink to="/" activeStyle>
+                  <a href="#" className="text-gray-900 hover:text-cyan-600">
+                    Accueil
+                  </a>
+                </NavLink>
+              
               </li>
               <li>
-                <a
-                  className="text-gray-200 hover:text-cyan-300"
-                  target="_parent"
-                  href="#"
-                >
-                  <Link to="/">
-                    <p className="font-thin">Accueil</p>
-                  </Link>
-                </a>
+                <NavLink to="/configurateur" activeStyle>
+                  <a
+                    href="#"
+                    className="text-gray-900 hover:text-cyan-600"
+                  >
+                    Configurateur
+                  </a>
+                </NavLink>
+               
               </li>
               <li>
                 <a
