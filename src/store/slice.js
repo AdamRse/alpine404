@@ -1,18 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    //valeurs
+    selection: {
+        model:false
+    }
 }
 
 export const alpineSlice = createSlice({
     name: "alpine",
     initialState,
     reducers: {
-        // newReducer(state, action) {
-        //     state.actionFree = action.payload;
-        // }
+        changeSelection(state, action){// payload : {section: "nomSection", value:"valeur"}
+            state.selection[action.payload.section] = action.payload.value
+        }
     },
 });
 
-//export const { newSlice } = alpineSlice.actions;
+export const { changeSelection } = alpineSlice.actions;
 export default alpineSlice.reducer;  

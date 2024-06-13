@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { changeSelection } from '../../store/slice';
+
 import bgPure from "../../images/configurateur/modele/selection/pure.png";
 import bgLegende from "../../images/configurateur/modele/selection/legende.png";
 
 function SelecteurAlpine() {
 
+    const dispatch = useDispatch();
     const [selectHover, setSelectHover] = useState(false);
+    const selection = useSelector(state => state.alpine.selection);
+
+    // dispatch(
+    //     manageActionFree(false)
+    // );
 
     function selecteurMotion() {
         let defaultLeftMargin = 10;
@@ -13,6 +22,11 @@ function SelecteurAlpine() {
         else defaultLeftMargin = -defaultLeftMargin
         console.log(selectHover, defaultLeftMargin);
         return { left: defaultLeftMargin + "%" }
+    }
+    function chooseAlpine(model){
+        dispatch(
+            changeSelection({section: "model", value:model})
+        );
     }
 
     return (
@@ -31,6 +45,7 @@ function SelecteurAlpine() {
                         src={bgPure}
                         onMouseEnter={() => setSelectHover(1)}
                         onMouseLeave={() => setSelectHover(false)}
+                        onClick={() => chooseAlpine("pure")}
                         alt="Pure"
                     />
                 </div>
@@ -41,6 +56,7 @@ function SelecteurAlpine() {
                         style={{ transform: "scaleX(-1)" }}
                         onMouseEnter={() => setSelectHover(0)}
                         onMouseLeave={() => setSelectHover(false)}
+                        onClick={() => chooseAlpine("legende")}
                         alt="Legend"
                     />
                 </div>
