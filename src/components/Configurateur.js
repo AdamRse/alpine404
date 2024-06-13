@@ -29,11 +29,11 @@ function Configurateur() {
           />
         </div>
           <div className="conteneur-images">
-            <div className="selcteur-card">
+            <div className="selecteur-card">
               <img
                 src={bgPure}
-                onMouseEnter={setSelectHover(1)}
-                onMouseLeave={setSelectHover(false)}
+                onMouseEnter={() => setSelectHover(1)}
+                onMouseLeave={() => setSelectHover(false)}
                 alt="Pure"
               />
             </div>

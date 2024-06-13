@@ -16,32 +16,22 @@
     width: 50%;
     filter: blur(8px);
 }
-#choix .selecteur{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 1;
-    
-}
-/* #choix .selecteur .conteneur-central{
-
-} */
-#choix .selecteur .conteneur-images{
+#choix .conteneur-images{
     display: flex;
     justify-content: space-between;
-    height: 100%;
     width: 50%;
     min-width: 300px;
     left: 10%;
+    z-index: 1;
 }
-#choix .selecteur .conteneur-images .selcteur-card{
+#choix .conteneur-images .selecteur-card{
     width: 40%;
     text-align: center;
     color: lightskyblue;
     cursor: pointer;
 }
 
-#choix .selecteur .conteneur-images  .selcteur-card img{
-    width: 100%;
+#choix .conteneur-images .selecteur-card img{
+    width: 20%;
     min-width: 300px;
 }
