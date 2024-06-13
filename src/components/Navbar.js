@@ -22,14 +22,14 @@ function Navbar() {
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-              <li>
+              <li>jnn 
                 <a href="./" className="text-gray-900 hover:text-cyan-600">
                   Accueil
                 </a>
               </li>
               <li>
                 <a
-                  href="./Configurateur.js"
+                  href="./configurateur#choix"
                   className="text-gray-900 hover:text-cyan-600"
                 >
                   Configurateur
