@@ -1,5 +1,6 @@
 import React from "react";
 import AlpineLogo from "../images/alpine-logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -18,28 +19,37 @@ function Navbar() {
           </a>
         </div>
       </nav>
-      <nav className="bg-gray-300">
+      <nav className="bg-gray-800">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
               <li>
-                <a href="./" className="text-gray-900 hover:text-cyan-600">
-                  Accueil
+                <a
+                  className="text-gray-200 hover:text-cyan-300"
+                  target="_parent"
+                  href="#"
+                >
+                  <Link to="/">
+                    <p className="font-thin">Accueil</p>
+                  </Link>
                 </a>
               </li>
               <li>
                 <a
-                  href="./Configurateur.js"
-                  className="text-gray-900 hover:text-cyan-600"
+                  className="text-gray-200 hover:text-cyan-300"
+                  target="_parent"
+                  href="#"
                 >
-                  Configurateur
+                  <Link to="/">
+                    <p className="font-thin">Accueil</p>
+                  </Link>
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.alpinecars.fr/"
                   target="_parent"
-                  className="text-gray-900 hover:text-cyan-600"
+                  className="text-gray-200 hover:text-cyan-600"
                 >
                   Features
                 </a>
@@ -48,7 +58,7 @@ function Navbar() {
                 <a
                   href="https://www.instagram.com/stephane__supercars/?hl=fr"
                   target="_parent"
-                  className="text-gray-900 hover:text-cyan-600"
+                  className="text-gray-200 hover:text-cyan-600"
                 >
                   Stéphane SuperCar
                 </a>

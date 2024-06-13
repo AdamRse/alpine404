@@ -9,14 +9,14 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route path="/configurateur" element={<Configurateur />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 }

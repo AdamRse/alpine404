@@ -58,10 +58,10 @@ function Landing() {
 
       <div className="flex justify-center">
         <div className="container">
-          <h1 className="font-semibold text-3xl content-center items-center mt-4">
+          <h1 className="font-semibold text-3xl content-center items-center mt-4 text-white m-5">
             MADE BY RACERS
           </h1>
-          <p className="flex justify-center items-center mt-5">
+          <p className="flex justify-center items-center mt-5 text-white bg-slate-950 p-5">
             En 1955, Jean Rédélé, entrepreneur passionné, fonde Alpine sur trois
             piliers : agilité, élégance, esprit de compétition. Conçue par des
             pilotes pour ceux qui veulent maîtriser l’asphalte, la légende
@@ -74,8 +74,10 @@ function Landing() {
           </p>
         </div>
 
-        <div>
-          <Triptych />
+        <div className="container">
+          <div>
+            <Triptych />
+          </div>
         </div>
       </div>
     </>
