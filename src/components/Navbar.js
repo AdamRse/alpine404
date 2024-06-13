@@ -1,5 +1,6 @@
 import React from "react";
 import AlpineLogo from "../images/alpine-logo.png";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
           </a>
         </div>
       </nav>
-      <nav className="bg-gray-300">
+      <nav className="bg-gray-800">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
@@ -29,7 +30,7 @@ function Navbar() {
                     Accueil
                   </a>
                 </NavLink>
-                
+              
               </li>
               <li>
                 <NavLink to="/configurateur" activeStyle>
@@ -40,13 +41,13 @@ function Navbar() {
                     Configurateur
                   </a>
                 </NavLink>
-                
+               
               </li>
               <li>
                 <a
                   href="https://www.alpinecars.fr/"
                   target="_parent"
-                  className="text-gray-900 hover:text-cyan-600"
+                  className="text-gray-200 hover:text-cyan-600"
                 >
                   Features
                 </a>
@@ -55,7 +56,7 @@ function Navbar() {
                 <a
                   href="https://www.instagram.com/stephane__supercars/?hl=fr"
                   target="_parent"
-                  className="text-gray-900 hover:text-cyan-600"
+                  className="text-gray-200 hover:text-cyan-600"
                 >
                   Stéphane SuperCar
                 </a>
